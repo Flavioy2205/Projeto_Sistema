@@ -12,12 +12,12 @@ namespace Projeto_Sistema.Modelo
         SqlCommand cmd = new SqlCommand();
         Conexao con = new Conexao();
         SqlDataReader dr;
-        public bool verificar(String login, String senha)
+        public bool verificar(String email, String senha)
         {
             // comandos sql para verificar se tem no banco 
 
             cmd.CommandText = "select * fron cadastro where email = @login and senha = @senha";
-            cmd.Parameters.AddWithValue("@login", login);
+            cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@senha", senha);
 
             try
@@ -37,9 +37,9 @@ namespace Projeto_Sistema.Modelo
             return tem;
         }
 
-        internal bool verificarLogin(string login, string senha)
+        internal bool verificarLogin(string email, string senha)
         {
-
+            
             throw new NotImplementedException();
         }
 

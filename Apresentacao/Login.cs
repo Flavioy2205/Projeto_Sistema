@@ -90,5 +90,10 @@ namespace Projeto_Sistema
             Cadastro cad = new Cadastro();
             cad.Show();
         }
+
+        private void btn_sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
